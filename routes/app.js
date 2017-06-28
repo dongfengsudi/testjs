@@ -7,9 +7,12 @@
 /* GET home page. */
 module.exports = function(app) {
     app.get('/', function (req, res) {
-        res.send('Hello World!');
+        res.render('index',{title:'Hello World'});
+        // res.send('Hello World!');
     });
-
+    app.get('/info', function (req, res){
+        res.render('index', {title:'info'});
+    })
 };
 
 // module.exports = router;
